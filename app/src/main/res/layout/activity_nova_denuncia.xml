@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="@string/nova_denuncia_title"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Tipo de Denúncia -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nova_denuncia_tipo"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/spinnerTipoDenuncia"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/spinner_background"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Categoria ASG -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nova_denuncia_categoria_asg"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/spinnerCategoriaASG"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/spinner_background"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Setor -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nova_denuncia_setor"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/spinnerSetor"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/spinner_background"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Local -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nova_denuncia_local"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilLocal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nova_denuncia_local_hint"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLocal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="@color/text_primary" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Hora -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nova_denuncia_hora"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nova_denuncia_hora_hint"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etHora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    android:textColor="@color/text_primary" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Descrição -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nova_denuncia_descricao"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nova_denuncia_descricao_hint"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="4"
+                    android:maxLines="6"
+                    android:textColor="@color/text_primary" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Checkbox Anônimo -->
+            <CheckBox
+                android:id="@+id/cbAnonimo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nova_denuncia_anonimo"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Botão Enviar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEnviarDenuncia"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/nova_denuncia_enviar"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/primary" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

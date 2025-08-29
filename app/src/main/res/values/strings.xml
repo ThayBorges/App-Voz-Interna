@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VozInterna</string>
+    
+    <!-- Login -->
+    <string name="login_title">Login</string>
+    <string name="login_email_hint">Digite seu e-mail corporativo</string>
+    <string name="login_senha_hint">Digite sua senha</string>
+    <string name="login_button">Entrar</string>
+    <string name="login_email_error">Por favor, insira um e-mail válido</string>
+    <string name="login_success">Login realizado com sucesso!</string>
+    
+    <!-- Menu lateral -->
+    <string name="nav_visao_empresa">Visão da Empresa</string>
+    <string name="nav_fazer_denuncia">Fazer Denúncia</string>
+    <string name="nav_minhas_denuncias">Minhas Denúncias</string>
+    <string name="nav_rh">RH</string>
+    <string name="nav_deslogar">Deslogar</string>
+    
+    <!-- Visão da empresa -->
+    <string name="visao_title">Visão da Empresa</string>
+    <string name="visao_denuncias_total">Total: 45</string>
+    <string name="visao_denuncias_analise">Em análise: 12</string>
+    <string name="visao_denuncias_respondidas">Respondidas: 28</string>
+    <string name="visao_denuncias_encerradas">Encerradas: 5</string>
+    
+    <!-- Nova denúncia -->
+    <string name="nova_denuncia_title">Nova Denúncia</string>
+    <string name="nova_denuncia_tipo">Tipo de Denúncia</string>
+    <string name="nova_denuncia_categoria_asg">Categoria ASG</string>
+    <string name="nova_denuncia_setor">Setor</string>
+    <string name="nova_denuncia_local">Local</string>
+    <string name="nova_denuncia_local_hint">Digite o local</string>
+    <string name="nova_denuncia_hora">Hora</string>
+    <string name="nova_denuncia_hora_hint">Digite a hora</string>
+    <string name="nova_denuncia_descricao">Descrição</string>
+    <string name="nova_denuncia_descricao_hint">Descreva o ocorrido</string>
+    <string name="nova_denuncia_anonimo">Denúncia anônima</string>
+    <string name="nova_denuncia_enviar">Enviar Denúncia</string>
+    <string name="nova_denuncia_success">Denúncia enviada com sucesso!</string>
+    <string name="nova_denuncia_error">Por favor, preencha todos os campos obrigatórios</string>
+    
+    <!-- Minhas denúncias -->
+    <string name="minhas_denuncias_title">Minhas Denúncias</string>
+    
+    <!-- RH -->
+    <string name="rh_title">Gerenciamento RH</string>
+    <string name="rh_responder">Responder</string>
+    <string name="rh_status">Status</string>
+    <string name="rh_detalhes">Detalhes</string>
+    
+    <!-- Status -->
+    <string name="status_analise">Em análise</string>
+    <string name="status_respondida">Respondida</string>
+    <string name="status_encerrada">Encerrada</string>
+    
+    <!-- Tipos de denúncia -->
+    <string name="tipo_assedio_moral">Assédio moral</string>
+    <string name="tipo_assedio_sexual">Assédio sexual</string>
+    <string name="tipo_discriminacao">Discriminação</string>
+    <string name="tipo_bullying">Bullying</string>
+    <string name="tipo_corrupcao">Corrupção</string>
+    <string name="tipo_fraude">Fraude</string>
+    <string name="tipo_violacao_ambiental">Violação ambiental</string>
+    <string name="tipo_violacao_seguranca">Violação de segurança</string>
+    <string name="tipo_outros">Outros</string>
+    
+    <!-- Categorias ASG -->
+    <string name="categoria_ambiental">Ambiental</string>
+    <string name="categoria_social">Social</string>
+    <string name="categoria_governanca">Governança</string>
+</resources>

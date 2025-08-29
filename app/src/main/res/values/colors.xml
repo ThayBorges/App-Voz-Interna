@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Paleta de cores VozInterna -->
+    <color name="primary">#05A8AA</color>
+    <color name="secondary">#B8D5B8</color>
+    <color name="accent">#D7B49E</color>
+    <color name="warning">#DC602E</color>
+    <color name="danger">#BC412B</color>
+    
+    <!-- Cores de fundo -->
+    <color name="background_light">#FAFAFA</color>
+    <color name="surface_light">#FFFFFF</color>
+    
+    <!-- Cores de texto -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+</resources>

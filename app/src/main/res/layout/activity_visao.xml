@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <!-- Conteúdo principal -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:navigationIcon="@drawable/ic_menu"
+                app:title="@string/visao_title"
+                app:titleTextColor="@color/white" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Card de estatísticas -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estatísticas de Denúncias"
+                            android:textSize="20sp"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="16dp" />
+
+                        <!-- Gráfico de pizza simulado -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp">
+
+                            <View
+                                android:id="@+id/pieChartEmAnalise"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@color/warning" />
+
+                            <View
+                                android:id="@+id/pieChartRespondidas"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@color/primary" />
+
+                            <View
+                                android:id="@+id/pieChartEncerradas"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@color/secondary" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvPieChartInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gráfico de pizza mostrando a distribuição das denúncias por status"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary"
+                            android:gravity="center"
+                            android:layout_marginBottom="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="12dp">
+
+                            <TextView
+                                android:id="@+id/tvDenunciasTotal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/visao_denuncias_total"
+                                android:textSize="16sp"
+                                android:textColor="@color/white"
+                                android:background="@color/primary"
+                                android:padding="12dp"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="12dp">
+
+                            <TextView
+                                android:id="@+id/tvDenunciasAnalise"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/visao_denuncias_analise"
+                                android:textSize="14sp"
+                                android:textColor="@color/white"
+                                android:background="@color/warning"
+                                android:padding="12dp"
+                                android:gravity="center"
+                                android:layout_marginEnd="6dp" />
+
+                            <TextView
+                                android:id="@+id/tvDenunciasRespondidas"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/visao_denuncias_respondidas"
+                                android:textSize="14sp"
+                                android:textColor="@color/white"
+                                android:background="@color/primary"
+                                android:padding="12dp"
+                                android:gravity="center"
+                                android:layout_marginStart="6dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvDenunciasEncerradas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/visao_denuncias_encerradas"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:background="@color/secondary"
+                            android:padding="12dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Card de informações sobre o Voz Interna -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/tvVozInternaTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="O que é o Voz Interna?"
+                            android:textSize="18sp"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="16dp" />
+
+                        <TextView
+                            android:id="@+id/tvVozInternaDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="O Voz Interna é um aplicativo corporativo voltado para colaboradores realizarem denúncias relacionadas a práticas ASG (Ambientais, Sociais e de Governança) diretamente ao setor de compliance da empresa. Este canal seguro permite que você reporte situações que violem nossos valores e políticas corporativas."
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary"
+                            android:lineSpacingExtra="4dp"
+                            android:layout_marginBottom="20dp" />
+
+                        <TextView
+                            android:id="@+id/tvObjetivoTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Objetivo"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvObjetivoDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Promover um ambiente de trabalho ético, seguro e sustentável, garantindo que todas as denúncias sejam tratadas com confidencialidade e investigadas adequadamente pelo setor de compliance."
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary"
+                            android:lineSpacingExtra="4dp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Menu lateral -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/surface_light"
+        app:headerLayout="@layout/nav_header_main"
+        app:itemTextColor="@color/text_primary"
+        app:itemIconTint="@color/primary"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
