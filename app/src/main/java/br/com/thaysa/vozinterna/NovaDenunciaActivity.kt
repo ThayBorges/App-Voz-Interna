@@ -5,17 +5,42 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.thaysa.vozinterna.databinding.ActivityNovaDenunciaBinding
+import com.google.firebase.Firebase
+import com.google.firebase.firestore.firestore
 
 class NovaDenunciaActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNovaDenunciaBinding
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityNovaDenunciaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnEnviarDenuncia.setOnClickListener {
+            val tipo = binding.spinnerTipoDenuncia.selectedItem.toString()
+            val categoriaASG = binding.spinnerCategoriaASG.selectedItem.toString()
+            val setor = binding.spinnerSetor.selectedItem.toString()
+            val local = binding.etLocal.text.toString().trim()
+            val hora = binding.etHora.text.toString().trim()
+            val descricao = binding.etDescricao.text.toString().trim()
+
+            if (validateForm()) {
+                // Simular envio da denúncia
+                setupEnviarFormulario(
+                    tipo,
+                    categoriaASG,
+                    setor,
+                    local,
+                    hora,
+                    descricao
+                )
+            } else {
+                Toast.makeText(this, "Por favor, preencha todos os campos obrigatórios", Toast.LENGTH_SHORT).show()
+            }
+        }
+
         setupSpinners()
-        setupEnviarButton()
         setupToolbar()
     }
 
@@ -65,16 +90,35 @@ class NovaDenunciaActivity : AppCompatActivity() {
         binding.spinnerSetor.adapter = adapterSetores
     }
 
-    private fun setupEnviarButton() {
-        binding.btnEnviarDenuncia.setOnClickListener {
-            if (validateForm()) {
-                // Simular envio da denúncia
-                Toast.makeText(this, "Denúncia enviada com sucesso ao setor de compliance!", Toast.LENGTH_LONG).show()
+    private fun setupEnviarFormulario(
+        tipo: String,
+        categoriaASG: String,
+        setor: String,
+        local: String,
+        hora: String,
+        descricao: String
+    ) {
+        val formData = hashMapOf(
+            "tipo" to tipo,
+            "categoriaASG" to categoriaASG,
+            "setor" to setor,
+            "local" to local,
+            "hora" to hora,
+            "descricao" to descricao
+        )
+
+        db.collection("formularios")
+            .add(formData)
+            .addOnSuccessListener { documentReference ->
+                // Sucesso ao enviar
+                Toast.makeText(this, "Formulário enviado com sucesso!", Toast.LENGTH_LONG).show()
                 finish()
-            } else {
-                Toast.makeText(this, "Por favor, preencha todos os campos obrigatórios", Toast.LENGTH_SHORT).show()
             }
-        }
+            .addOnFailureListener { e ->
+                // Falha ao enviar
+                Toast.makeText(this, "Erro ao enviar formulário: ${e.message}", Toast.LENGTH_LONG).show()
+                finish()
+            }
     }
 
     private fun setupToolbar() {
