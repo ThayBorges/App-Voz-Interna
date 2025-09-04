@@ -5,31 +5,31 @@ VozInterna é um aplicativo Android desenvolvido para gerenciar denúncias inter
 
 ## Funcionalidades
 
-### 👤 Pedro - Login e Menu Lateral
+###  Login e Menu Lateral
 - **LoginActivity**: Autenticação com e-mail corporativo
 - **Menu Lateral**: Navegação entre todas as telas do app
 - Validação de formato de e-mail
 - Redirecionamento automático para VisaoActivity após login
 
-### 👤 Luca - Visão da Empresa
+###  Visão da Empresa
 - **VisaoActivity**: Dashboard com estatísticas de denúncias
 - Gráficos e resumos das denúncias
 - Menu lateral implementado
 - Navegação para outras telas
 
-### 👤 Juan - Nova Denúncia
+###  Nova Denúncia
 - **NovaDenunciaActivity**: Formulário completo de denúncia
 - Campos: tipo, local, hora, descrição, anonimato
 - Validação de campos obrigatórios
 - Simulação de envio
 
-### 👤 Alessandro - Minhas Denúncias
+###  Minhas Denúncias
 - **MinhasDenunciasActivity**: Histórico pessoal de denúncias
 - RecyclerView com lista de denúncias
 - Status: em análise, respondida, encerrada
 - Dados simulados para demonstração
 
-### 👤 Thaysa - RH
+###  RH
 - **RHActivity**: Gerenciamento de todas as denúncias
 - Lista completa com RecyclerView
 - Botões de ação: responder, alterar status, visualizar detalhes
