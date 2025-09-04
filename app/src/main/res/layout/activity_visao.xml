@@ -69,25 +69,10 @@
                             android:gravity="center"
                             android:layout_marginBottom="20dp">
 
-                            <View
-                                android:id="@+id/pieChartEmAnalise"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:layout_marginEnd="8dp"
-                                android:background="@color/warning" />
-
-                            <View
-                                android:id="@+id/pieChartRespondidas"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:layout_marginEnd="8dp"
-                                android:background="@color/primary" />
-
-                            <View
-                                android:id="@+id/pieChartEncerradas"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:background="@color/secondary" />
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:id="@+id/pieChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp" />
 
                         </LinearLayout>
 
