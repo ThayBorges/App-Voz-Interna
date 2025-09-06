@@ -48,9 +48,9 @@
             android:layout_height="wrap_content"
             android:text="Status"
             android:textSize="14sp"
-            android:textColor="@color/warning"
             android:textStyle="bold"
             android:background="@drawable/status_background"
+            android:textColor="@color/white"
             android:padding="6dp"
             android:layout_marginBottom="12dp" />
 
@@ -78,6 +78,7 @@
                 android:layout_height="40dp"
                 android:text="@string/rh_detalhes"
                 android:textSize="12sp"
+                android:textColor="@color/white"
                 android:backgroundTint="@color/accent"
                 android:layout_marginEnd="8dp"
                 style="@style/Widget.Material3.Button.OutlinedButton" />
@@ -88,6 +89,7 @@
                 android:layout_height="40dp"
                 android:text="@string/rh_status"
                 android:textSize="12sp"
+                android:textColor="@color/white"
                 android:backgroundTint="@color/warning"
                 android:layout_marginEnd="8dp"
                 style="@style/Widget.Material3.Button.OutlinedButton" />
@@ -98,6 +100,7 @@
                 android:layout_height="40dp"
                 android:text="@string/rh_responder"
                 android:textSize="12sp"
+                android:textColor="@color/white"
                 android:backgroundTint="@color/primary"
                 style="@style/Widget.Material3.Button.OutlinedButton" />
 
