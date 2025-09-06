@@ -115,7 +115,7 @@ class VisaoActivity : AppCompatActivity() {
         pieChart.setUsePercentValues(true)     // Faz com que o gráfico use porcentagens para os cálculos
         pieChart.setEntryLabelTextSize(12f)
         pieChart.setEntryLabelColor(Color.BLACK) // Cor dos rótulos (Ambiental, Social...)
-        pieChart.centerText = "Total\nDenúncias" // Texto no centro do donut
+        pieChart.centerText = "Total de\nDenúncias" // Texto no centro do donut
         pieChart.setCenterTextSize(18f)
 
         // Configurar a legenda

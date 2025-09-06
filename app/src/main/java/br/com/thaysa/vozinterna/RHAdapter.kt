@@ -42,7 +42,7 @@ class RHAdapter(
                 "Encerrada" -> 0xFFB8D5B8.toInt() // Verde
                 else -> 0xFFBC412B.toInt() // Vermelho
             }
-            binding.tvStatusDenuncia.setTextColor(statusColor)
+            binding.tvStatusDenuncia.setBackgroundColor(statusColor)
             
             // Configurar botões
             binding.btnResponder.setOnClickListener { onResponderClick(denuncia) }
